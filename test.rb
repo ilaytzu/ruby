@@ -3,10 +3,17 @@ class ALLA
         @x=x
     end
     def get_twice
-        return (@x.to_i)*2
+        if(@x.to_i != 0)
+            return (@x.to_i*2)
+        end
+        else
+            return (@x*2)
+        end
     end
 end
-
-a = ALLA.new(15)
-puts a.get_twice
-gets
+while true
+    w=gets.chomp
+    a = ALLA.new(w)
+    puts a.get_twice
+    puts ""
+end
